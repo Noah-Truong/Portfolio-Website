@@ -1,0 +1,126 @@
+.commissions-page {
+  min-height: calc(100vh - 160px);
+  padding-bottom: 60px;
+}
+
+.commissions-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.commissions-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.commissions-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.commission-types {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.commission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.commission-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.commission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.commission-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.commission-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.commission-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.commission-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.commission-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  margin: 40px 0;
+}
+
+.commission-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.commission-cta p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.commission-form-section {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .commissions-hero {
+    padding: 60px 30px;
+  }
+
+  .commissions-hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .commission-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

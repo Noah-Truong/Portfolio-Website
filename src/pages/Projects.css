@@ -1,0 +1,126 @@
+.projects-page {
+  min-height: calc(100vh - 160px);
+  padding-bottom: 60px;
+}
+
+.projects-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.projects-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.projects-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 50px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+}
+
+.project-image {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.project-icon {
+  font-size: 5rem;
+}
+
+.project-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: #f0f0f0;
+  color: #667eea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.project-link:hover {
+  color: #764ba2;
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 968px) {
+  .projects-hero {
+    padding: 60px 30px;
+  }
+
+  .projects-hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 40px 30px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

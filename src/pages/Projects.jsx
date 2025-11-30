@@ -35,7 +35,7 @@ function Projects() {
       <div className={`projects-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <h1>My Projects</h1>
         <p>
-        <Typewriter text="See what I've been working on" speed={40} />
+        <Typewriter text="See what I've been working on!" speed={40} />
         </p>
       </div>
 

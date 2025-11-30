@@ -43,7 +43,7 @@ function Commissions() {
       <div className={`commissions-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <h1>Freelance Services</h1>
         <p>
-        <Typewriter text="These are the software/hardware services I currently provide" speed={40}/>
+        <Typewriter text="These are the software/hardware services I currently provide!" speed={40}/>
         </p>
       </div>
 

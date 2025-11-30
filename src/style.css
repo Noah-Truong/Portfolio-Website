@@ -218,24 +218,35 @@ html {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  border-right: 3px solid black;
+}
+
+/* cursor moved to pseudo-element */
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 3px;
+  background: black;
   animation: cursorBlink 0.7s steps(1) infinite;
 }
 
 @media (max-width: 480px) {
   .typewriter {
-    white-space: normal;
-    overflow: visible;
+    white-space: normal !important;
+    display: inline !important;
+    overflow: visible !important;
     overflow-wrap: break-word;
     word-break: break-word;
   }
+
+  .typewriter::after {
+    position: static !important;
+  }
 }
 
-
-
-
 @keyframes cursorBlink {
-  0% { border-color: black; }
-  50% { border-color: transparent; }
-  100% { border-color: black; }
+  0%   { background: black; }
+  50%  { background: transparent; }
+  100% { background: black; }
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './CommissionForm.css';
-// Backend API endpoint
-const API_URL = import.meta.env.VITE_API_URL || '';
+
 
 function CommissionForm() {
   const [formData, setFormData] = useState({

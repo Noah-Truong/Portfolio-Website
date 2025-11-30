@@ -17,7 +17,7 @@ function Home() {
   const quickActions = [
     {
       title: 'Freelance Services',
-      icon: '/assets/freelance.jpeg',
+      icon: '/assets/freelance.png',
       link: '/commissions',
       color: '#23df59'
     },
@@ -29,7 +29,7 @@ function Home() {
     },
     {
       title: 'Contact',
-      icon: '/assets/contact.png',
+      icon: '/assets/contact.jpeg',
       link: '/contact',
       color: '#23df59'
     },

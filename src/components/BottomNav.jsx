@@ -21,7 +21,7 @@ function BottomNav() {
     {
       path: '/commissions',
       label: 'Freelance Services',
-      icon: '/assets/freelance.jpeg'
+      icon: '/assets/freelance.png'
     },
     {
       path: '/projects',
@@ -31,7 +31,7 @@ function BottomNav() {
     {
       path: '/contact',
       label: 'Contact',
-      icon: '/assets/contact.png'
+      icon: '/assets/contact.jpeg'
     },
     {
       path: '/about',

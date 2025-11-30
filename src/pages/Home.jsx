@@ -64,6 +64,7 @@ function Home() {
                 <Link
                   key={index}
                   to={action.link}
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className={`app-icon ${isVisible ? `fade-in-up-delay-${Math.min(index + 2, 5)}` : ''}`}
                 >
                   <div className="app-icon-wrapper" style={{ background: `linear-gradient(135deg, ${action.color}20 0%, ${action.color}10 100%)` }}>

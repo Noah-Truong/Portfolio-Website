@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import CommissionEmailTemplate from './formtemplates/commissiontemplate.js';
 import ContactEmailTemplate from './formtemplates/contacttemplate.js';
-import { renderToStaticMarkup } from 'react-dom/server';
+
 
 // Load environment variables
 dotenv.config();

@@ -1,0 +1,26 @@
+.top-home-indicator-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  padding: 8px 0;
+  pointer-events: none;
+}
+
+.top-home-indicator {
+  width: 134px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  margin: 0 auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 480px) {
+  .top-home-indicator {
+    width: 120px;
+    height: 4px;
+  }
+}
+

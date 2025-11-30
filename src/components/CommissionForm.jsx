@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './CommissionForm.css';
+// Backend API endpoint
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 function CommissionForm() {
   const [formData, setFormData] = useState({
@@ -9,7 +11,8 @@ function CommissionForm() {
     commissionType: '',
     budget: '',
     description: '',
-    timeline: ''
+    timeline: '',
+    discordUsername: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -21,11 +24,52 @@ function CommissionForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the data to a backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
+    
+    try {
+      console.log('📧 Sending commission request to backend API...');
+      console.log('API URL:', `${API_URL}/api/send-commission`);
+      console.log('Form data:', formData);
+
+      const response = await fetch(`${API_URL}/api/send-commission`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          robloxUsername: formData.robloxUsername,
+          discordUsername: formData.discordUsername,
+          commissionType: formData.commissionType,
+          budget: formData.budget,
+          timeline: formData.timeline,
+          description: formData.description,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error('❌ API Error:', result);
+        alert(`Failed to send email: ${result.error || 'Unknown error'}\n\nMake sure the backend server is running on port 3001.`);
+        return;
+      }
+
+      console.log('✅ Email sent successfully!', result);
+      setSubmitted(true);
+    } catch (error) {
+      console.error('❌ Error sending email:', error);
+      
+      if (error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
+        alert('Connection Error: Could not connect to the email server.\n\nMake sure the backend server is running:\n  npm run server\n\nOr check that the server is running on http://localhost:3001');
+      } else {
+        alert(`Error: ${error.message}\n\nCheck console for details.`);
+      }
+      
+      return;
+    }
     
     // Reset form after 3 seconds
     setTimeout(() => {
@@ -37,7 +81,8 @@ function CommissionForm() {
         commissionType: '',
         budget: '',
         description: '',
-        timeline: ''
+        timeline: '',
+        discordUsername: ''
       });
     }, 3000);
   };
@@ -64,7 +109,7 @@ function CommissionForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            placeholder="John Doe"
+            placeholder="Your Name"
           />
         </div>
         <div className="form-group">
@@ -91,7 +136,7 @@ function CommissionForm() {
             value={formData.robloxUsername}
             onChange={handleChange}
             required
-            placeholder="YourRobloxUsername"
+            placeholder="Your Roblox Username"
           />
         </div>
         <div className="form-group">
@@ -123,11 +168,11 @@ function CommissionForm() {
             required
           >
             <option value="">Select budget</option>
-            <option value="25-50">$25 - $50</option>
-            <option value="50-100">$50 - $100</option>
-            <option value="100-250">$100 - $250</option>
-            <option value="250-500">$250 - $500</option>
-            <option value="500+">$500+</option>
+            <option value="10-20">$10 - $20</option>
+            <option value="20-30">$20 - $30</option>
+            <option value="40-50">$40 - $50</option>
+            <option value="50-60">$50 - $60</option>
+            <option value="60+">$60+</option>
           </select>
         </div>
         <div className="form-group">
@@ -148,7 +193,21 @@ function CommissionForm() {
           </select>
         </div>
       </div>
-
+      <div className="form-row">
+        <div className="form-group">
+          <label htmlFor="discordUsername">Discord Username *</label>
+          <input
+            type="text"
+            id="discordUsername"
+            name="discordUsername"
+            value={formData.discordUsername}
+            onChange={handleChange}
+            required
+            placeholder="Your Discord Username"
+          />
+        </div>
+      </div>
+    <div className="form-row">
       <div className="form-group">
         <label htmlFor="description">Project Description *</label>
         <textarea
@@ -158,10 +217,11 @@ function CommissionForm() {
           onChange={handleChange}
           required
           rows="6"
-          placeholder="Tell me about your project, what you're looking for, and any specific requirements..."
+          placeholder="Tell me about your billion robux idea..."
         ></textarea>
       </div>
-
+    
+      </div>
       <button type="submit" className="btn btn-primary btn-submit">
         Submit Commission Request
       </button>

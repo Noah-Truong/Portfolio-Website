@@ -1,86 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
+import Typewriter from '../components/Typewriter';
 
 function Projects() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const projects = [
     {
-      id: 1,
-      title: 'Adventure Quest Game',
-      description: 'A complete RPG experience with quests, inventory system, and combat mechanics',
-      image: '🎮',
-      technologies: ['Lua', 'Roblox Studio', 'Game Design'],
-      link: '#'
+      id: 'project1',
+      title: 'Battery Eliminator Circuit',
+      image: '/assets/dcConverter.png',
+      link: 'https://docs.google.com/document/d/1nWAGxdaSM9FGoOf1Yinko8zmWANne6PMh4_m-ocxKjU/edit?usp=sharing'
     },
     {
-      id: 2,
-      title: 'Custom GUI System',
-      description: 'A fully customizable UI framework for Roblox games with smooth animations',
-      image: '🎨',
-      technologies: ['Lua', 'UI/UX', 'Animations'],
-      link: '#'
+      id: 'project2',
+      title: 'Discord Chatbot',
+      image: '/assets/noagpt.png',
+      link: 'https://noa-void-workbench.lovable.app/'
     },
     {
-      id: 3,
-      title: 'Racing Game Mechanics',
-      description: 'Advanced vehicle physics and racing mechanics with leaderboards',
-      image: '🏎️',
-      technologies: ['Lua', 'Physics', 'Networking'],
-      link: '#'
-    },
-    {
-      id: 4,
-      title: 'Tycoon System',
-      description: 'Custom tycoon game with upgrade systems and automated production',
-      image: '💰',
-      technologies: ['Lua', 'Data Structures', 'Game Economy'],
-      link: '#'
-    },
-    {
-      id: 5,
-      title: 'Obby Platformer',
-      description: 'Challenging obby with checkpoints, timers, and dynamic obstacles',
-      image: '🧗',
-      technologies: ['Lua', 'Level Design', 'Game Mechanics'],
-      link: '#'
-    },
-    {
-      id: 6,
-      title: 'Social Hub',
-      description: 'Interactive social space with custom minigames and friend systems',
-      image: '👥',
-      technologies: ['Lua', 'Social Features', 'Networking'],
-      link: '#'
+      id: 'project3',
+      title: 'My Game Development Journey',
+      image: '/assets/gamedevjourney.png',
+      link: 'https://www.instagram.com/p/DMKBiaOOuwc/'
     }
   ];
 
   return (
     <div className="projects-page">
-      <div className="projects-hero">
+      <div className={`projects-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <h1>My Projects</h1>
-        <p>Explore my past work and creations</p>
+        <Typewriter text="See what I've been working on" speed={40} />
       </div>
 
-      <div className="container">
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div className="project-image">
-                <div className="project-icon">{project.image}</div>
-              </div>
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
-                  ))}
+      <div className="phone-container">
+        <div className={`phone-screen ${isVisible ? 'fade-in-up-delay-1' : ''}`}>
+          <div className="apps-grid">
+            {projects.map((project, index) => (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`app-icon ${isVisible ? `fade-in-up-delay-${Math.min(index + 2, 5)}` : ''}`}
+              >
+                <div className="app-icon-wrapper">
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="app-icon-image"
+                    />
+                  ) : (
+                    <div className="app-icon-placeholder">
+                      {project.title.charAt(0)}
+                    </div>
+                  )}
                 </div>
-                <a href={project.link} className="project-link">
-                  View Project →
-                </a>
-              </div>
-            </div>
-          ))}
+                <p className="app-icon-label">{project.title}</p>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -88,4 +72,3 @@ function Projects() {
 }
 
 export default Projects;
-

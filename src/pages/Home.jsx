@@ -1,63 +1,119 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import WorkExperience from '../data/workExperience';
+import Typewriter from '../components/Typewriter';
 import './Home.css';
 
 function Home() {
-  return (
-    <div className="home">
-      <section className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">Welcome to My Portfolio</h1>
-          <p className="hero-subtitle">Roblox Developer & Creative Designer</p>
-          <p className="hero-description">
-            Specializing in game development, scripting, and custom Roblox experiences.
-            Let's bring your vision to life!
-          </p>
-          <div className="hero-buttons">
-            <Link to="/commissions" className="btn btn-primary">
-              Get Commission
-            </Link>
-            <Link to="/projects" className="btn btn-secondary">
-              View My Work
-            </Link>
-          </div>
-        </div>
-        <div className="hero-image">
-          <div className="floating-card">
-            <div className="card-icon">🎮</div>
-            <h3>Game Development</h3>
-            <p>Custom Roblox experiences</p>
-          </div>
-        </div>
-      </section>
+  const [isVisible, setIsVisible] = useState(false);
 
-      <section className="features">
-        <div className="container">
-          <h2 className="section-title">What I Offer</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Fast Turnaround</h3>
-              <p>Efficient development and quick delivery times</p>
+
+
+ 
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const quickActions = [
+    {
+      title: 'Freelance Services',
+      icon: '/assets/freelance.jpeg',
+      link: '/commissions',
+      color: '#23df59'
+    },
+    {
+      title: 'Projects',
+      icon: '/assets/projects.jpeg',
+      link: '/projects',
+      color: '#1fb2d3'
+    },
+    {
+      title: 'Contact',
+      icon: '/assets/contact.png',
+      link: '/contact',
+      color: '#23df59'
+    },
+    {
+      title: 'About',
+      icon: '/assets/profpic.jpeg',
+      link: '/about',
+      color: '#1fb2d3'
+    }
+  ];
+  
+  return (
+    <div className="home-page">
+      <div className={`home-hero ${isVisible ? 'fade-in-up' : ''}`}>
+        <div className="home-header">
+          <h1>Noah Truong</h1>
+          <Typewriter text="Electrical Engineering and Computer Sciences" speed={35} />
+        </div>
+      </div>
+
+      <div className="phone-container">
+        <div className={`phone-screen ${isVisible ? 'fade-in-up-delay-1' : ''}`}>
+          <div className="screen-content">
+            <h2 className="screen-section-title">Quick Actions</h2>
+            <div className="apps-grid">
+              {quickActions.map((action, index) => (
+                <Link
+                  key={index}
+                  to={action.link}
+                  className={`app-icon ${isVisible ? `fade-in-up-delay-${Math.min(index + 2, 5)}` : ''}`}
+                >
+                  <div className="app-icon-wrapper" style={{ background: `linear-gradient(135deg, ${action.color}20 0%, ${action.color}10 100%)` }}>
+                    <img 
+                      src={action.icon} 
+                      alt={action.title}
+                      className="app-icon-image"
+                    />
+                  </div>
+                  <p className="app-icon-label">{action.title}</p>
+                </Link>
+              ))}
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">🎨</div>
-              <h3>Custom Designs</h3>
-              <p>Unique, tailored solutions for your projects</p>
+            
+            <h2 className="screen-section-title" style={{ marginTop: '3rem' }}>Work Experience</h2>
+            <div className="apps-grid">
+              {WorkExperience.map((job, index) => (
+                <Link
+                  to={`/experience/${job.id}`}
+                  key={job.id}
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className={`app-icon ${isVisible ? `fade-in-up-delay-${Math.min(index + 6, 5)}` : ''}`}
+                >
+                  <div className="app-icon-wrapper">
+                    <img 
+                      src={job.logo} 
+                      alt={job.org}
+                      className="app-icon-image"
+                    />
+                  </div>
+                  <p className="app-icon-label">{job.org}</p>
+                </Link>
+              ))}
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">💎</div>
-              <h3>Quality Work</h3>
-              <p>High-quality code and polished results</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🤝</div>
-              <h3>Communication</h3>
-              <p>Regular updates and collaborative process</p>
+            <h2 className="screen-section-title" style={{ marginTop: '3rem' }}>Education</h2>
+            <div className="berkeley-link">
+              <a
+                href='https://eecs.berkeley.edu/'
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`berkeley-app ${isVisible ? 'fade-in-up-delay-5' : ''}`}
+              >
+                <div className="app-icon-wrapper" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)' }}>
+                  <img 
+                    src='/assets/berkeley_logo.png'
+                    alt='UC Berkeley'
+                    className="app-icon-image"
+                  />
+                </div>
+                <p className="app-icon-label">UC Berkeley</p>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

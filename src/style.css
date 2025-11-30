@@ -6,10 +6,10 @@
 
 :root {
   --primary-color: #667eea;
-  --secondary-color: #764ba2;
+  --secondary-color: #4ba289;
   --text-dark: #333;
   --text-light: #666;
-  --bg-light: #f8f9fa;
+  --bg-light: #030f0a;
   --white: #ffffff;
 }
 
@@ -19,9 +19,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--text-dark);
+  color: white;
   line-height: 1.6;
-  background-color: var(--bg-light);
+  background-color: var(--white);
 }
 
 code {
@@ -38,6 +38,9 @@ code {
 .main-content {
   flex: 1;
   width: 100%;
+  padding-top: 30px; /* Space for top home indicator */
+  padding-bottom: 10px; /* Space for bottom navigation */
+  min-height: 100vh;
 }
 
 /* Global Button Styles */
@@ -55,8 +58,8 @@ code {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: white;
+  background: white;
+  color: rgb(0, 0, 0);
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
@@ -88,3 +91,139 @@ html {
   color: white;
 }
 
+/* Startup Animations */
+.app {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.app.loaded {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page Transition Animations */
+.main-content {
+  animation: pageFadeIn 0.6s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-up-delay-1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.1s forwards;
+}
+
+.fade-in-up-delay-2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.fade-in-up-delay-3 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.fade-in-up-delay-4 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.fade-in-up-delay-5 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale In Animation */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In From Left */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In From Right */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: fit-content;
+  animation: cursorBlink 0.7s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+  0% { border-color: black; }
+  50% { border-color: transparent; }
+  100% { border-color: black; }
+}

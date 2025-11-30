@@ -1,126 +1,253 @@
 .commissions-page {
-  min-height: calc(100vh - 160px);
-  padding-bottom: 60px;
+  min-height: 100vh;
+  background: white;
 }
 
 .commissions-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 80px 50px;
+  background: white;
+  color: rgb(0, 0, 0);
+  padding: 80px 50px 60px;
   text-align: center;
 }
 
 .commissions-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-.commissions-hero p {
-  font-size: 1.3rem;
-  opacity: 0.9;
+/* Phone Container */
+.phone-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  min-height: calc(100vh - 300px);
+  width: 100%;
 }
 
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 50px;
+.phone-screen {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: min(40px, 3vw);
+  padding: min(40px, 3vw) min(30px, 2.5vw) min(60px, 4vw);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+              0 0 0 8px #1a1a1a,
+              0 0 0 12px #0a0a0a,
+              inset 0 0 50px rgba(0, 0, 0, 0.3);
+  max-width: min(90vw, 1200px);
+  width: 100%;
+  position: relative;
 }
 
-.commission-types {
-  padding: 60px 0;
+.phone-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(150px, 12vw);
+  height: min(25px, 2vw);
+  background: #0a0a0a;
+  border-radius: 0 0 min(20px, 1.5vw) min(20px, 1.5vw);
+  z-index: 10;
 }
 
-.section-title {
+.screen-content {
+  padding-top: min(30px, 3vw);
+}
+
+.service-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: min(2rem, 3vw);
+  border-radius: min(15px, 2vw);
+  margin-bottom: min(2rem, 3vw);
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
 }
 
-.commission-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+.service-detail {
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.commission-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid transparent;
+.service-icon {
+  width: min(80px, 10vw);
+  height: auto;
+  margin-bottom: min(1rem, 1.5vw);
 }
 
-.commission-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
+.service-detail h3 {
+  font-size: min(1.3rem, 2vw);
+  margin-bottom: min(1rem, 1.5vw);
+  color: rgba(0, 0, 0, 0.95);
 }
 
-.commission-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.commission-card h3 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.commission-card p {
-  color: #666;
+.service-detail p {
+  font-size: min(0.95rem, 1.4vw);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: min(1rem, 1.5vw);
+  opacity: 0.85;
 }
 
 .commission-price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #667eea;
+  font-size: min(1.2rem, 2vw);
+  font-weight: 700;
+  color: #000000;
 }
 
-.commission-cta {
+.screen-section-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: min(1.5rem, 2.5vw);
+  font-weight: 600;
+  margin-bottom: min(25px, 3vw);
   text-align: center;
-  padding: 60px 20px;
-  background: #f8f9fa;
-  border-radius: 15px;
-  margin: 40px 0;
 }
 
-.commission-cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: min(30px, 3vw) min(20px, 2vw);
+  justify-items: center;
+  max-width: 100%;
 }
 
-.commission-cta p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
+.app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: min(150px, 12vw);
+  min-width: 100px;
+}
+
+.app-icon:hover {
+  transform: scale(1.1);
+}
+
+.app-icon:active {
+  transform: scale(0.95);
+}
+
+.app-icon-wrapper {
+  width: min(120px, 10vw);
+  height: min(120px, 10vw);
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: min(18px, 1.5vw);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  margin-bottom: min(8px, 0.8vw);
+  overflow: hidden;
+  position: relative;
+}
+
+.app-icon-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: min(18px, 1.5vw);
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.app-icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: min(18px, 1.5vw);
+}
+
+.app-icon-label {
+  font-size: min(0.85rem, 1.1vw);
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: pre-line;
+  max-width: min(120px, 12vw);
+}
+
+.commission-cta-button {
+  margin-top: min(3rem, 5vw);
+  text-align: center;
 }
 
 .commission-form-section {
-  margin-top: 40px;
+  margin-top: min(2rem, 3vw);
+  background: rgba(255, 255, 255, 0.08);
+  padding: min(2rem, 3vw);
+  border-radius: min(15px, 2vw);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1400px) {
+  .apps-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+  .apps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 968px) {
   .commissions-hero {
-    padding: 60px 30px;
+    padding: 60px 30px 40px;
   }
 
+  .commissions-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .phone-container {
+    padding: 40px 20px;
+  }
+
+  .phone-screen {
+    padding: 30px 20px 50px;
+    border-radius: min(30px, 4vw);
+    max-width: 95vw;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: min(25px, 4vw) min(15px, 2vw);
+  }
+}
+
+@media screen and (max-width: 480px) {
   .commissions-hero h1 {
     font-size: 2rem;
   }
 
-  .container {
-    padding: 0 30px;
+  .phone-container {
+    padding: 30px 15px;
   }
 
-  .commission-grid {
-    grid-template-columns: 1fr;
+  .phone-screen {
+    padding: 25px 15px 40px;
+    border-radius: min(25px, 6vw);
+    max-width: 98vw;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: min(20px, 5vw) min(12px, 3vw);
   }
 }
-

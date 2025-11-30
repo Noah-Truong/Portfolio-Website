@@ -20,7 +20,7 @@ function BottomNav() {
     },
     {
       path: '/commissions',
-      label: 'Freelance Services',
+      label: 'Freelance\nServices',
       icon: '/assets/freelance.png'
     },
     {

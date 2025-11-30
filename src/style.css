@@ -217,10 +217,22 @@ html {
 .typewriter {
   white-space: nowrap;
   overflow: hidden;
+  display: inline-block;
   border-right: 3px solid black;
-  width: fit-content;
   animation: cursorBlink 0.7s steps(1) infinite;
 }
+
+@media (max-width: 480px) {
+  .typewriter {
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+
+
 
 @keyframes cursorBlink {
   0% { border-color: black; }

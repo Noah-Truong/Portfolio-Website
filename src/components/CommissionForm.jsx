@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CommissionForm.css';
 // Backend API endpoint
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 function CommissionForm() {
   const [formData, setFormData] = useState({
@@ -29,10 +29,10 @@ function CommissionForm() {
     
     try {
       console.log('📧 Sending commission request to backend API...');
-      console.log('API URL:', `${API_URL}/api/send-commission`);
+      console.log('API URL:', `/api/send-commission`);
       console.log('Form data:', formData);
 
-      const response = await fetch(`${API_URL}/api/send-commission`, {
+      const response = await fetch(`/api/send-commission`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

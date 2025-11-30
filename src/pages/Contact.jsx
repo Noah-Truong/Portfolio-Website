@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Contact.css';
 import Typewriter from '../components/Typewriter';
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL || '';
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -32,10 +32,10 @@ function Contact() {
     setSubmitted(true);
     try {
       console.log('📧 Sending commission request to backend API...');
-      console.log('API URL:', `${API_URL}/api/send-commission`);
+      console.log('API URL:', `/api/send-commission`);
       console.log('Form data:', formData);
 
-      const response = await fetch(`${API_URL}/api/send-contact`, {
+      const response = await fetch(`/api/send-contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

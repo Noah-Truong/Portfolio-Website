@@ -238,22 +238,49 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .commissions-hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .commissions-hero p {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    opacity: 0.95;
   }
 
   .phone-container {
-    padding: 30px 15px;
+    padding: 28px 18px;
   }
 
   .phone-screen {
-    padding: 25px 15px 40px;
+    padding: 25px 16px 40px;
     border-radius: min(25px, 6vw);
     max-width: 98vw;
   }
 
+  .service-detail h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-detail p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .commission-price {
+    font-size: 1.35rem;
+  }
+
   .apps-grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: min(20px, 5vw) min(12px, 3vw);
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 22px 16px;
+  }
+
+  .app-icon-label {
+    font-size: 1.1rem;
+    max-width: 100px;
+    line-height: 1.25;
   }
 }

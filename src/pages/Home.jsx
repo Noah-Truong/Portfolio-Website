@@ -46,7 +46,12 @@ function Home() {
       <div className={`home-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <div className="home-header">
           <h1>Noah Truong</h1>
+          <p>
+          UC Berkeley 2029
+          </p>
+          <p>
           <Typewriter text="Electrical Engineering and Computer Sciences" speed={35} />
+          </p>
         </div>
       </div>
 

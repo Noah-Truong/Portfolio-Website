@@ -27,7 +27,9 @@ When I'm not coding, you can find me exploring new game development techniques, 
     <div className="about-page">
       <div className={`about-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <h1>About Me</h1>
+        <p>
         <Typewriter text="Learn more about me!" speed={40}/>
+        </p>
       </div>
 
       <div className="phone-container">

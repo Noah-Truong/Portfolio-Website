@@ -9,7 +9,11 @@
   padding: 80px 50px 60px;
   text-align: center;
 }
-
+.about-hero p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  margin-bottom: 0.5rem;
+}
 .about-avatar {
   width: 120px;
   height: 120px;

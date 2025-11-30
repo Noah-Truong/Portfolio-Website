@@ -106,7 +106,9 @@ function Contact() {
     <div className="contact-page">
       <div className={`contact-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <h1>Get In Touch</h1>
-        <Typewriter text="Have a question or want to work together? Let's chat!" speed={35} />
+        <p>
+        <Typewriter text="Have a question or want to collaborate? Let's chat!" speed={35} />
+        </p>
       </div>
 
       <div className="phone-container">

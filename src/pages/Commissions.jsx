@@ -22,20 +22,17 @@ function Commissions() {
 
   const pastWork = [
     {
-      titleImage: '/assets/homeless_title.png',
-      gameImage: '/assets/homeless_addon.png',
+      titleImage: '/assets/homeless_addon.png',
       title: '[Beta] Homeless Simulator',
       link: 'https://www.roblox.com/games/76631316909858/Homeless-Simulator'
     },
     {
-      titleImage: '/assets/tungtungobby_title.png',
-      gameImage: '/assets/tungtungobby_addon.png',
+      titleImage: '/assets/tungtungobby_addon.png',
       title: 'TungTung\nTungSahur\nObby',
       link: 'https://www.roblox.com/games/80929191589661/TungTungTungSahur-Obby'
     },
     {
-      titleImage: '/assets/67sim_title.png',
-      gameImage: '/assets/67sim_addon.png',
+      titleImage: '/assets/67sim_addon.png',
       title: '[Collect 67] Simulator',
       link: 'https://www.roblox.com/games/121224456961897/COLLECT-67-Simulator-Game'
     }
@@ -45,7 +42,9 @@ function Commissions() {
     <div className="commissions-page">
       <div className={`commissions-hero ${isVisible ? 'fade-in-up' : ''}`}>
         <h1>Freelance Services</h1>
+        <p>
         <Typewriter text="These are the software/hardware services I currently provide" speed={40}/>
+        </p>
       </div>
 
       <div className="phone-container">

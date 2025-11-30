@@ -16,6 +16,12 @@
   font-weight: 700;
 }
 
+.commissions-hero p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  margin-bottom: 0.5rem;
+}
+
 /* Phone Container */
 .phone-container {
   display: flex;

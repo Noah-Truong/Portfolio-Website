@@ -52,8 +52,7 @@ function CommissionForm() {
       const result = await response.json();
 
       if (!response.ok) {
-        console.error('❌ API Error:', result);
-        alert(`Failed to send email: ${result.error || 'Unknown error'}\n\nMake sure the backend server is running on port 3001.`);
+        alert(`Failed to send message: ${result.error || 'Unknown error'}`);
         return;
       }
 
@@ -63,7 +62,7 @@ function CommissionForm() {
       console.error('❌ Error sending email:', error);
       
       if (error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
-        alert('Connection Error: Could not connect to the email server.\n\nMake sure the backend server is running:\n  npm run server\n\nOr check that the server is running on http://localhost:3001');
+        alert(`Failed to send message: ${result.error || 'Unknown error'}`);
       } else {
         alert(`Error: ${error.message}\n\nCheck console for details.`);
       }

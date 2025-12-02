@@ -14,7 +14,7 @@ function Projects() {
       id: 'project1',
       title: 'Battery Eliminator Circuit',
       image: '/assets/dcConverter.png',
-      link: 'https://docs.google.com/document/d/1nWAGxdaSM9FGoOf1Yinko8zmWANne6PMh4_m-ocxKjU/edit?usp=sharing'
+      link: 'https://noahtruong-noahtruong-2.365.altium.com/designs/FA7DE2E6-F6A9-41ED-B103-1269B11C3006?variant=[No+Variations]&activeView=SCH&activeDocumentId=BEC.SchDoc&location=[1,81.69,37.58,57]#design'
     },
     {
       id: 'project2',

@@ -14,7 +14,7 @@ function Projects() {
       id: 'project1',
       title: 'Battery Eliminator Circuit',
       image: '/assets/dcConverter.png',
-      link: 'https://acrobat.adobe.com/id/urn:aaid:sc:US:021ac597-2188-4f63-a8b7-4443965894dd'
+      link: 'https://acrobat.adobe.com/id/urn:aaid:sc:US:b186107f-ccf0-4e71-9196-d5e1e288893c'
     },
     {
       id: 'project2',

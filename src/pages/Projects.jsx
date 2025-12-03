@@ -14,19 +14,13 @@ function Projects() {
       id: 'project1',
       title: 'Battery Eliminator Circuit',
       image: '/assets/dcConverter.png',
-      link: 'https://noahtruong-noahtruong-2.365.altium.com/designs/FA7DE2E6-F6A9-41ED-B103-1269B11C3006?variant=[No+Variations]&activeView=SCH&activeDocumentId=BEC.SchDoc&location=[1,81.69,37.58,57]#design'
+      link: 'https://drive.google.com/file/d/1AEzos0sPQOHSlOnMqoh996bc1HCae1wS/view?usp=sharing'
     },
     {
       id: 'project2',
       title: 'Discord Chatbot',
       image: '/assets/noagpt.png',
       link: 'https://noa-void-workbench.lovable.app/'
-    },
-    {
-      id: 'project3',
-      title: 'My Game Development Journey',
-      image: '/assets/gamedevjourney.png',
-      link: 'https://www.instagram.com/p/DMKBiaOOuwc/'
     }
   ];
 

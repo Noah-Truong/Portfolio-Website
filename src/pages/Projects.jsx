@@ -20,7 +20,7 @@ function Projects() {
       id: 'project2',
       title: 'Discord Chatbot',
       image: '/assets/noagpt.png',
-      link: 'https://noa-void-workbench.lovable.app/'
+      link: 'https://noagpt-website.vercel.app/'
     }
   ];
 

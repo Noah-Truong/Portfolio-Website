@@ -21,6 +21,12 @@ function Projects() {
       title: 'Discord Chatbot',
       image: '/assets/noagpt.png',
       link: 'https://noagpt-website.vercel.app/'
+    },
+    {
+      id: 'project3',
+      title: '12o1b',
+      image: '/assets/12o1b.png',
+      link: 'https://12o1b.vercel.app/'
     }
   ];
 

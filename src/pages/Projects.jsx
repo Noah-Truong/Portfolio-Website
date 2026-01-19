@@ -27,6 +27,12 @@ function Projects() {
       title: '12o1b',
       image: '/assets/12o1b.png',
       link: 'https://12o1b.vercel.app/'
+    },
+    {
+      id: 'project4',
+      title: 'Fourier Transform Visualizer',
+      image: '/assets/fourier.png',
+      link: 'https://fourier-app.vercel.app/'
     }
   ];
 

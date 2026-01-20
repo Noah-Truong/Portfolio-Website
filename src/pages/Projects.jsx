@@ -30,7 +30,7 @@ function Projects() {
     },
     {
       id: 'project4',
-      title: 'Fourier Transform Visualizer',
+      title: 'Fourier Series Visualizer',
       image: '/assets/fourier.png',
       link: 'https://fourier-app.vercel.app/'
     }

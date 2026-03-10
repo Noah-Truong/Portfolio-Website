@@ -25,7 +25,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: #111;
   line-height: 1.6;
   background-color: var(--white);
   overflow-x: hidden;

@@ -31,10 +31,10 @@
 }
 
 .phone-screen {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(180deg, #dfe3e8 0%, #c9ced6 100%);
   border-radius: min(40px, 3vw);
   padding: min(40px, 3vw) min(30px, 2.5vw) min(60px, 4vw);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+  box-shadow: 0 20px 60px rgba(221, 217, 217, 0.5),
     0 0 0 8px #1a1a1a,
     0 0 0 12px #0a0a0a,
     inset 0 0 50px rgba(0, 0, 0, 0.3);
@@ -161,13 +161,13 @@
 }
 
 .form-success h2 {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   margin-bottom: min(1rem, 1.5vw);
   font-size: min(1.5rem, 2.5vw);
 }
 
 .form-success p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.75);
   line-height: 1.6;
   font-size: min(1rem, 1.5vw);
 }

@@ -97,13 +97,13 @@ export default function ExperienceDetail() {
             <div className={`experience-content ${isVisible ? 'fade-in-up-delay-1' : ''}`}>
               <div className="experience-description">
                 <h3>Overview</h3>
-                <p className="description-text">{experience.description}</p>
+                <p className="description-text center">{experience.description}</p>
               </div>
 
               {experience.details && (
                 <div className="experience-details">
                   <h3>Details</h3>
-                  <p className="details-text">{experience.details}</p>
+                  <p className="details-text center">{experience.details}</p>
                 </div>
               )}
             </div>

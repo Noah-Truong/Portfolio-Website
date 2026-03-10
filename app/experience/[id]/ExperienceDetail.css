@@ -1,7 +1,6 @@
 .experience-detail-page {
   min-height: 100vh;
   background: white;
-  color: #ffffff;
 }
 
 .experience-hero {
@@ -24,10 +23,10 @@
 }
 
 .phone-screen {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(180deg, #dfe3e8 0%, #c9ced6 100%);
   border-radius: min(40px, 3vw);
   padding: min(40px, 3vw) min(30px, 2.5vw) min(60px, 4vw);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+  box-shadow: 0 20px 60px rgba(221, 217, 217, 0.5),
     0 0 0 8px #1a1a1a,
     0 0 0 12px #0a0a0a,
     inset 0 0 50px rgba(0, 0, 0, 0.3);
@@ -117,12 +116,13 @@
   text-align: center;
 }
 
-.description-text,
+.description-text ,
 .details-text {
   font-size: min(1rem, 1.5vw);
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.9);
   white-space: pre-line;
+  text-align: center;
 }
 
 .experience-not-found {
@@ -136,13 +136,13 @@
 
 .experience-not-found h1 {
   font-size: 2.5rem;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .experience-not-found p {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 2rem;
 }
 

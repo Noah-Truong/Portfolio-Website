@@ -1,4 +1,3 @@
-
 export default function ContactEmailTemplate(props) {
   return `
   <div style="font-family: Arial; padding: 20px;">

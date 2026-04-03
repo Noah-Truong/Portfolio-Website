@@ -2,6 +2,7 @@ import './globals.css';
 import AppWrapper from '@/components/AppWrapper';
 import TopHomeIndicator from '@/components/TopHomeIndicator';
 import BottomNav from '@/components/BottomNav';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Noah Truong | Portfolio',
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
           <main className="main-content">{children}</main>
           <BottomNav />
         </AppWrapper>
+        <SpeedInsights />
       </body>
     </html>
   );

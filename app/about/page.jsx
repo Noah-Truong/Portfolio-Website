@@ -5,18 +5,11 @@ import './About.css';
 import Typewriter from '@/components/Typewriter';
 
 const socialLinks = [
-  {
-    name: 'LinkedIn',
-    logo: '/assets/linkedin_logo.png',
-    url: 'https://www.linkedin.com/in/noah-truong-86350b321/?skipRedirect=true',
-  },
+  { name: 'LinkedIn', logo: '/assets/linkedin_logo.png', url: 'https://www.linkedin.com/in/noah-truong-86350b321/?skipRedirect=true' },
   { name: 'GitHub', logo: '/assets/github_logo.png', url: 'https://github.com/Noah-Truong' },
   { name: 'Twitter', logo: '/assets/xlogo.png', url: 'https://x.com/iD0ntNoahGuy' },
-  {
-    name: 'Gmail',
-    logo: '/assets/gmail_logo.png',
-    url: 'https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSDbFRXvtrsVpWBfzlgMSzpkXTczZwxPjRXThRFsXBcXgQXFmHBdrtCxgthbkNWjLqcmmdnG',
-  },
+  { name: 'Gmail', logo: '/assets/gmail_logo.png', url: 'https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSDbFRXvtrsVpWBfzlgMSzpkXTczZwxPjRXThRFsXBcXgQXFmHBdrtCxgthbkNWjLqcmmdnG' },
+  { name: 'YouTube', logo: '/assets/youtube_logo.png', url: 'https://www.youtube.com/@noahbyte-t9l'}
 ];
 
 const aboutText = `Hello world, I'm Noah! My goal in life is to build a thing that build things, and eventually I want that thing to build a statue of myself building the thing that is building the statue of myself building the thing.`;

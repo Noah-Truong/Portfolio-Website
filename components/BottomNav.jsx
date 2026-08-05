@@ -17,7 +17,7 @@ export default function BottomNav() {
     { path: '/', label: 'Home', icon: '/assets/home.png' },
     { path: '/projects', label: 'Projects', icon: '/assets/projects.jpeg' },
     { path: '/contact', label: 'Contact', icon: '/assets/contact.jpeg' },
-    { path: '/about', label: 'About', icon: '/assets/profpic.jpg' },
+    { path: '/about', label: 'About', icon: '/assets/profpic.png' },
   ];
 
   return (

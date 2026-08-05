@@ -52,7 +52,7 @@ export default function Home() {
   const quickActions = [
     { title: 'Projects', icon: '/assets/projects.jpeg', link: '/projects', color: '#1fb2d3' },
     { title: 'Contact', icon: '/assets/contact.jpeg', link: '/contact', color: '#23df59' },
-    { title: 'About', icon: '/assets/profpic.jpg', link: '/about', color: '#1fb2d3' },
+    { title: 'About', icon: '/assets/profpic.png', link: '/about', color: '#1fb2d3' },
   ];
 
   return (
